@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,6 +55,21 @@ public class MainActivity extends AppCompatActivity {
         clear = (RadioButton) findViewById(R.id.ClearAllRadioButton);
 
         // Done with Accessing!!
+
+        // Retrieving the radio group programmatically!!
+
+        RadioGroup rg = (RadioGroup) findViewById(R.id.RadioGroup);
+
+        //Registering a handler that listens to changes in the radio group!!
+
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                
+            }
+        });
+
+
 
 
     }
