@@ -74,4 +74,64 @@
             android:textSize="18sp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim_twentyFive"
+        android:minHeight="179dp"
+        android:layout_marginTop="@dimen/dp_twenty">
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RadioGroup" >
+
+            <RadioButton
+                android:text="Trinangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TriangleRadioButton"
+                android:checked="true"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Square"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/SquareRadioButton"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/CircleRadioButton"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Rectangle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RectangleRadioButton"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="ClearAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ClearAllRadioButton"
+                android:layout_weight="1" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:padding="@dimen/dp_twenty"
+        android:layout_marginTop="@dimen/dp_twenty" />
+
 </LinearLayout>
