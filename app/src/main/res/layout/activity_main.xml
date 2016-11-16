@@ -3,4 +3,75 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_ten"
+        android:layout_marginTop="@dimen/dp_five">
+
+        <TextView
+            android:text="@string/length1_StringName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Length1TextView"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/Length1EditText"
+            android:layout_weight="1"
+            android:hint="Enter Length" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_ten">
+
+        <TextView
+            android:text="@string/Length2_StringName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Length2TextView"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/Length2EditText"
+            android:layout_weight="1"
+            android:hint="Enter Length" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_twelve">
+
+        <TextView
+            android:text="@string/Area_StringName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AreaTextView"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AreaResultTextView"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
 </LinearLayout>
