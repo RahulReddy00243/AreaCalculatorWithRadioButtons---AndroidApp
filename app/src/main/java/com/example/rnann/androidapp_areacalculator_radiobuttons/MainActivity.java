@@ -40,5 +40,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        //Programmatically accessing the elements via their id located in R file
+
+        lengthOneValueEditText = (EditText) findViewById(R.id.Length1EditText);
+        lengthTwoValueEditText = (EditText) findViewById(R.id.Length2EditText);
+
+        resultValueTextView = (TextView) findViewById(R.id.AreaResultTextView);
+
+        triangle = (RadioButton) findViewById(R.id.TriangleRadioButton);
+        square = (RadioButton) findViewById(R.id.SquareRadioButton);
+        circle= (RadioButton) findViewById(R.id.CircleRadioButton);
+        rectangle = (RadioButton) findViewById(R.id.RectangleRadioButton);
+        clear = (RadioButton) findViewById(R.id.ClearAllRadioButton);
+
+        // Done with Accessing!!
+
+
     }
 }
