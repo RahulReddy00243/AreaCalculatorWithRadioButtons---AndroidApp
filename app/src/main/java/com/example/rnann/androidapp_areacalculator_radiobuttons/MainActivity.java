@@ -118,8 +118,56 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.SquareRadioButton:
                     {
-                        
+                        calculate.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+
+                                //Reading the input length values
+
+                                if (lengthOneValueEditText.getText().toString().equals(null)||lengthOneValueEditText.getText().toString().equals("")||lengthOneValueEditText.getText().toString().equals(".")){
+
+                                    Toast.makeText(MainActivity.this,"Please Enter value in  Length1 respectively!!", Toast.LENGTH_SHORT).show();
+
+                                }else {
+
+
+                                    //(lengthOneValueEditText.getText().toString()) gets the input value as string and thus we are parsing string to double
+
+                                    length1 = Double.parseDouble(lengthOneValueEditText.getText().toString());
+                                    lengthTwoValueEditText.setText("");
+
+                                    //Done reading Input values entered by the User!!
+
+
+                                    //printing the values read to logcat to check functioning of the App
+
+                                    Log.d("rahul", "length1 is :" + length1);
+                                    Log.d("rahul", "length2 is :" + length2);
+
+                                    // Done checking, Values got printed  in the LogCat!!
+
+                                    //Calculating the area
+                                    area = length1 * length1;
+                                    Log.d("rahul", "square area is :" + area);
+
+
+
+                                    //converting area from double to string -> to display the result as text on the result Text View
+                                    result = Double.toString(area);
+
+
+                                    resultValueTextView.setText(result);
+
+                                    //Calculated area and printed it on the Area Result Text View!!
+
+                                }
+
+                            }
+                        });
                     }
+
+                    //End of Square Area Calculation LOgic!!
                 }
 
             }
