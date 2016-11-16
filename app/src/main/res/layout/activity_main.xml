@@ -16,7 +16,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/Length1TextView"
             android:layout_weight="1"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
 
         <EditText
             android:layout_width="match_parent"
@@ -25,7 +26,8 @@
             android:ems="10"
             android:id="@+id/Length1EditText"
             android:layout_weight="1"
-            android:hint="Enter Length" />
+            android:hint="Enter Length"
+            android:textStyle="normal|bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -40,7 +42,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/Length2TextView"
             android:layout_weight="1"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
 
         <EditText
             android:layout_width="match_parent"
@@ -49,7 +52,8 @@
             android:ems="10"
             android:id="@+id/Length2EditText"
             android:layout_weight="1"
-            android:hint="Enter Length" />
+            android:hint="Enter Length"
+            android:textStyle="normal|bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,7 +68,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/AreaTextView"
             android:layout_weight="1"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -90,39 +95,53 @@
 
             <RadioButton
                 android:text="Trinangle"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/TriangleRadioButton"
-                android:checked="true"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:padding="2dp" />
 
             <RadioButton
                 android:text="Square"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/SquareRadioButton"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:padding="2dp" />
 
             <RadioButton
                 android:text="Circle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/CircleRadioButton"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:padding="2dp" />
 
             <RadioButton
                 android:text="Rectangle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/RectangleRadioButton"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:padding="2dp" />
 
             <RadioButton
                 android:text="ClearAll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/ClearAllRadioButton"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:padding="2dp" />
         </RadioGroup>
     </LinearLayout>
 
@@ -131,7 +150,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/CalculateButton"
+        android:layout_marginTop="@dimen/dp_ten"
+        android:textStyle="normal|bold"
         android:padding="@dimen/dp_twenty"
-        android:layout_marginTop="@dimen/dp_twenty" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
 
 </LinearLayout>
