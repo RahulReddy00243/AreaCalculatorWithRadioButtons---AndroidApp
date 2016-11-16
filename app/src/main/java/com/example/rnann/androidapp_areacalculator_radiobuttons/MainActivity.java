@@ -11,10 +11,15 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static java.lang.Math.*;
+
+
 public class MainActivity extends AppCompatActivity {
 
 
     // Declaring the view variables globally -> to make life easier
+
+      private final static double PI = 3.14;
 
     EditText lengthOneValueEditText;
     EditText lengthTwoValueEditText;
@@ -78,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                        calculate.setOnClickListener(new View.OnClickListener() {
                            @Override
                            public void onClick(View v) {
-                               if (lengthOneValueEditText.getText().toString().equals(null)||lengthOneValueEditText.getText().toString().equals("")||lengthTwoValueEditText.getText().toString().equals(null)||lengthTwoValueEditText.getText().toString().equals("")){
+                               if (lengthOneValueEditText.getText().toString().equals(null)||lengthOneValueEditText.getText().toString().equals("")||lengthTwoValueEditText.getText().toString().equals(null)||lengthTwoValueEditText.getText().toString().equals("")||lengthOneValueEditText.getText().toString().equals(".")||lengthTwoValueEditText.getText().toString().equals(".")){
                                    Toast.makeText(MainActivity.this,"Please Enter values in  Length1 and Length2 respectively!!", Toast.LENGTH_SHORT).show();
                                }else {
 
@@ -86,6 +91,10 @@ public class MainActivity extends AppCompatActivity {
                                    length2 = Double.parseDouble(lengthTwoValueEditText.getText().toString());
 
                                    //Done reading Input values entered by the User!!
+
+                                   //Clearing User Input Fields!!
+                                   lengthTwoValueEditText.setText("");
+                                   lengthOneValueEditText.setText("");
 
 
                                    //printing the values read to logcat to check functioning of the App
@@ -135,7 +144,10 @@ public class MainActivity extends AppCompatActivity {
                                     //(lengthOneValueEditText.getText().toString()) gets the input value as string and thus we are parsing string to double
 
                                     length1 = Double.parseDouble(lengthOneValueEditText.getText().toString());
+
+                                    //Clearing User Input Fields!!
                                     lengthTwoValueEditText.setText("");
+                                    lengthOneValueEditText.setText("");
 
                                     //Done reading Input values entered by the User!!
 
@@ -168,6 +180,94 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     //End of Square Area Calculation LOgic!!
+
+                    case R.id.CircleRadioButton:
+                    {
+                        calculate.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                if (lengthOneValueEditText.getText().toString().equals(null)||lengthOneValueEditText.getText().toString().equals("")||lengthOneValueEditText.getText().toString().equals(".")){
+                                    Toast.makeText(MainActivity.this,"Please Enter Length1 Value!!",Toast.LENGTH_SHORT).show();
+                                }else {
+
+                                    length1 = Double.parseDouble(lengthOneValueEditText.getText().toString());
+                                    // Done with reading Input values from the user!!
+
+                                    //Clearing User Input Fields!!
+                                    lengthTwoValueEditText.setText("");
+                                    lengthOneValueEditText.setText("");
+
+                                    area = PI*length1*length1;
+
+                                    result = Double.toString(area) ;
+
+                                    resultValueTextView.setText( result);
+
+                                    //Done with Calculating area and Displaying Results!!
+                                }
+                            }
+                        });
+                    }
+
+                    //done with Circle Area Calculation Logic!!
+
+
+                    case R.id.RectangleRadioButton:
+                    {
+                        calculate.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (lengthOneValueEditText.getText().toString().equals(null)||lengthOneValueEditText.getText().toString().equals("")||lengthTwoValueEditText.getText().toString().equals(null)||lengthTwoValueEditText.getText().toString().equals("")||lengthOneValueEditText.getText().toString().equals(".")||lengthTwoValueEditText.getText().toString().equals(".")){
+                                    Toast.makeText(MainActivity.this,"Please Enter values in  Length1 and Length2 respectively!!", Toast.LENGTH_SHORT).show();
+                                }else {
+
+                                    length1 = Double.parseDouble(lengthOneValueEditText.getText().toString());
+                                    length2 = Double.parseDouble(lengthTwoValueEditText.getText().toString());
+
+                                    //Done reading Input values entered by the User!!
+
+                                    //Clearing User Input Fields!!
+                                    lengthTwoValueEditText.setText("");
+                                    lengthOneValueEditText.setText("");
+
+
+                                    //printing the values read to logcat to check functioning of the App
+
+                                    Log.d("rahul", "length1 is :" + length1);
+                                    Log.d("rahul", "length2 is :" + length2);
+
+                                    // Done checking, Values got printed  in the LogCat!!
+
+                                    //Calculating the area
+                                    area =  length1 * length2;
+                                    Log.d("rahul", "triangle area is :" + area);
+
+
+
+                                    //converting area from double to string -> to display the result as text on the result Text View
+                                    result = Double.toString(area);
+
+
+                                    resultValueTextView.setText(result);
+
+                                    //Calculated area and printed it on the Area Result Text View!!
+
+                                }
+                            }
+                        });
+                    }
+
+                    //End of Rectangle Area Calculation logic!!
+
+                    case R.id.ClearAllRadioButton:{
+
+                        lengthOneValueEditText.setText("");
+                        lengthTwoValueEditText.setText("");
+                        resultValueTextView.setText("");
+
+                    }
+
                 }
 
             }

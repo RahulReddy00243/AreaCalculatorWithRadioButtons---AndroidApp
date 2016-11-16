@@ -68,10 +68,10 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/AreaResultTextView"
             android:layout_weight="1"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_height="42dp" />
     </LinearLayout>
 
     <LinearLayout
