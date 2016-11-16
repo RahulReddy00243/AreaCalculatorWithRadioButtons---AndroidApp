@@ -127,10 +127,10 @@
     </LinearLayout>
 
     <Button
-        android:text="Button"
+        android:text="Calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/CalculateButton"
         android:padding="@dimen/dp_twenty"
         android:layout_marginTop="@dimen/dp_twenty" />
 
